@@ -13,7 +13,8 @@ class Solution:
                 elif nums[l] + nums[r] > -nums[i]:
                     r -= 1
                 else:
-                    if [nums[l], nums[r], nums[i]] not in sols:
-                        sols.append([nums[l], nums[r], nums[i]])
+                    sols.append([nums[l], nums[r], nums[i]])
                     l += 1
+                    while nums[l] == nums[l - 1] and l < r:
+                        l += 1
         return sols
