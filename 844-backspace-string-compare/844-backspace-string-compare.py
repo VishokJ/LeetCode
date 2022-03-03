@@ -8,5 +8,4 @@ class Solution:
             if i == "#": 
                  if len(listS): listS.pop() # Need to put two if's to make sure to not put '#' in list
             else: listS.append(i)
-        print(listS)
         return listS
