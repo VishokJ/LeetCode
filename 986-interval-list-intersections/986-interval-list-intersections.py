@@ -8,7 +8,7 @@ class Solution:
             if start <= end:
                 outList.append([start, end])
                 if end == firstList[s][1]: s += 1
-                if end == secondList[t][1]: t += 1
+                else: t += 1
             else:
                 if start == firstList[s][0]: t += 1
                 else: s += 1
