@@ -3,8 +3,10 @@ class Solution:
         return self.processString(s) == self.processString(t)
     
     def processString(self, s):
-        final = ""
+        listS = []
         for i in list(s):
-            if i == "#": final = final[:-1]
-            else: final += i
-        return final
+            if i == "#": 
+                 if len(listS): listS.pop() # Need to put two if's to make sure to not put '#' in list
+            else: listS.append(i)
+        print(listS)
+        return listS
